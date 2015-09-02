@@ -7,7 +7,7 @@ for i in {0..101}
 do
 	prxy="172.16.0.$i:8080"
 	echo "Connecting: $prxy"
-	curl --proxy $prxy --max-time 3 --silent 74.125.224.72 --output "log.txt"
+	curl --proxy $prxy --max-time 1 --silent 74.125.224.72 --output "log.txt"
 	
 	if [[ -s log.txt ]]
 	then

@@ -8,6 +8,6 @@ sh proxy.sh
 
 ``
 
-- Iterate over 172.16.0.[0-99]:8080
-- Maximum time of programme: 3.3333min
-- Default time out time: 3seconds
+- Iterate over 172.16.0.[0-100]:8080
+- Maximum time of programme: 1.68333min
+- Default time out time: 1seconds
