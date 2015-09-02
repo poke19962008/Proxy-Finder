@@ -3,11 +3,11 @@
 rm -f log.txt	#Remove Previous Log File
 fin=( "0" )
 
-for i in {0..100}
+for i in {0..101}
 do
 	prxy="172.16.0.$i:8080"
 	echo "Connecting: $prxy"
-	curl --proxy $prxy --max-time 1 --silent 74.125.224.72 --output "log.txt"
+	curl --proxy $prxy --max-time 3 --silent 74.125.224.72 --output "log.txt"
 	
 	if [[ -s log.txt ]]
 	then
@@ -25,8 +25,8 @@ echo "---------------------------------------------------------------"
 unset fin[0]
 if [[ ${#fin[@]} -ne 0 ]]
 then
-	echo ${#fi[@]}" Proxy IP are open."
-	echo ${fi[@]}
+	echo "Open Proxy: "${#fin[@]}
+	echo "IP: "${fin[@]}
 else
 	echo "Sorry no proxy server is open."
 fi
