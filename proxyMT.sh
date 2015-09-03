@@ -17,6 +17,9 @@ function frth_pos() {
 		then
 		  # Data Received
 			echo "$prxy : is ON"
+			echo "Speed: "
+			curl --proxy $prxy --max-time 1 --silent -w %{speed_download} 74.125.224.72
+			echo " "
 		fi
 	done
 
@@ -26,7 +29,7 @@ for i in {0..101}
 do
 	frth_pos $i &  # MultiThreaded
 done
-echo "All 100 Threads Started Successfully..."
+echo "All 100 Threads Scanning for Open Proxy Server"
 wait
 
 echo "Scan Finished..."
