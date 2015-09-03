@@ -1,7 +1,7 @@
 #!bin/bash
 #AUTHOR: poke19962008
 
-rm -f "log/*"	#Remove Previous Log File
+rm -f log/*	#Remove Previous Log File
 fin=( "0" )
 
 # $1 = 172.16.X._
