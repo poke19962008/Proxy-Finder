@@ -17,8 +17,8 @@ function frth_pos() {
 		then
 		  # Data Received
 			echo "$prxy : is ON"
-			echo "Speed: "
-			curl --proxy $prxy --max-time 1 --silent -w %{speed_download} 74.125.224.72
+			echo "Download Speed(bits/sec) : " 
+                        curl --proxy $prxy --max-time 2 --silent -w %{speed_download} 74.125.224.72 | awk '/.[0]{3}/'
 			echo " "
 		fi
 	done
